@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline3",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/newdatacontainer1/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/207750eb-5a2f-4dbf-9358-2d0049608c22/resourceGroups/Dataresource1/providers/Microsoft.Storage/storageAccounts/newdatastorageaccount",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
